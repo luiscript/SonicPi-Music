@@ -1,11 +1,16 @@
-# Something about us (Daft punk)
-# luiscript SonicPi Remix
+# Daft punk with code - Something about us
+# Coded by @luiscript with Sonic Pi
 
-# Coded and produced by Luis Fer García
-# Original samples included
+# If you enjoy PLEASE
+# like | follow | suscribe | star
 
-# @luiscript
-# 2017
+# facebook.com/luiscript
+# twitter.com/luiscript
+# youtube.com/user/luiscript
+# github.com/luiscript
+
+# Also consider support Sam Aaron on Patreon
+# patreon.com/samaaron
 
 
 use_bpm 100
@@ -14,7 +19,7 @@ use_debug false
 define :pianoMelody do
   use_synth :piano
   use_synth_defaults amp: 2, release: 4
-  
+
   play [:f2, :a2, :d3]
   sleep 4
   play [:g2, :a2, :c3]
@@ -36,7 +41,7 @@ end
 define :synth1 do
   use_synth :saw
   use_synth_defaults release: 0.25
-  
+
   sleep 0.5
   play :d2
   sleep 0.75
@@ -65,7 +70,7 @@ end
 define :synth2 do
   use_synth :pluck
   use_synth_defaults amp: 0.8
-  
+
   play :d3, release: 1
   sleep 1
   play :e3, release: 1
@@ -114,31 +119,31 @@ define :snare do
 end
 
 live_loop :somethingAboutUs  do
-  
+
   3.times do
     with_fx :lpf, cutoff: 80 do
       pianoMelody
     end
   end
-  
+
   with_fx :reverb do
     2.times do
       synth2
     end
   end
-  
+
   sample :daftVoice, amp: 0.8
   sleep 64
-  
+
   with_fx :lpf, cutoff: 80 do
     pianoMelody
   end
-  
+
   sample :daftSynth, amp: 0.7
   sleep 96
-  
+
   stop
-  
+
 end
 
 with_fx :bitcrusher do
@@ -190,5 +195,3 @@ live_loop :sn, delay: 48 do
   end
   stop
 end
-
-
