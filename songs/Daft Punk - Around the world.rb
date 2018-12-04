@@ -109,7 +109,8 @@ end
 define :baselineIntro do
   with_fx :ixi_techno, mix: 0.2 do
     with_fx :lpf, cutoff: 50 + tick * 3 do
-      play_pattern_timed [:e2, :d2, :d2, :b1, :b1, :a1, :a1, :g1], 0.5,
+      play_pattern_timed [:fs2, :e2, :d2, :c2, :b1, :a1, :g1, :g1, :a1],
+        [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.25, 0.25],
         release: 0.0, sustain: 0.125, amp: 2
     end
   end
@@ -117,16 +118,16 @@ end
 
 define :baseline do
   with_fx :lpf, cutoff: 80 do
-    play_pattern_timed [:a1, :a1, :a1, :a1, :b1, :c2, :c2, :c2, :c2, :d2, :e2, :e2, :e2, :e2, :fs2, :e2, :d2, :b1, :b1, :a1, :g1  ],
-      [1, 1, 1, 0.5, 0.25, 1.25, 1, 1, 0.5, 0.25, 1.25, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1],
+    play_pattern_timed [:a1, :a1, :a1, :a1, :b1, :c2, :r, :c2, :c2, :c2, :d2, :e2, :r, :e2, :e2, :e2, :fs2, :e2, :d2, :c2, :b1, :a1, :g1, :g1, :a1],
+      [1, 1, 1, 0.5, 0.25, 0.25, 1, 1, 1, 0.5, 0.25, 0.25, 1, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.25, 0.25],
       release: 0.0, sustain: 0.3
   end
 end
 
 define :funkyBaseline do
   with_fx :lpf, cutoff: 80 do
-    play_pattern_timed [:e1, :d2, :e2, :b1, :d2, :b1, :d2, :b1, :d2, :e2, :c1, :c2, :c2, :b1, :b1, :a1, :b1, :g1],
-      [0.5, 0.5, 0.5, 0.5, 0.5, 0.25, 0.5, 0.25, 0.25, 0.25, 0.5, 0.75, 0.25, 0.5, 0.75, 0.25, 0.5, 0.5],
+    play_pattern_timed [:e2, :d3, :e3, :e2, :d3, :e2, :d3, :e2, :d3, :e3, :c2, :c3, :c2, :c3, :c2, :b1, :b1, :a2, :b2, :g2],
+      [0.5, 0.5, 0.5, 0.5, 0.5, 0.25, 0.5, 0.25, 0.25, 0.25, 0.5, 0.5, 0.25, 0.25, 0.5, 0.25, 0.5, 0.25, 0.5, 0.5],
       release: 0.0, sustain: 0.3
   end
 end
